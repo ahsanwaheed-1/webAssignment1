@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {FormGroup,FormControl, ReactiveFormsModule, FormsModule} from "@angular/forms"
 import { RouterOutlet } from '@angular/router';
+//import {CalculatePipe} from "../calculate.pipe";
 
 @Component({
   selector: 'app-calculator-site',
@@ -44,31 +45,21 @@ export class CalculatorSiteComponent {
   }
 
   // Perform calculation
-  // calculate() {
-  //   try {
-  //     // Evaluate the expression, removing any spaces
-  //     this.currentInput = eval(this.currentInput.replace(/ /g, ''));
-  //   } catch (error) {
-  //     this.currentInput = 'Error';  // Handle invalid expressions
-  //   }
-  // }
+  calculate() {
+    try {
+      // Evaluate the expression, removing any spaces
+      this.currentInput = eval(this.currentInput.replace(/ /g, ''));
+    } catch (error) {
+      this.currentInput = 'Error';  // Handle invalid expressions
+    }
+  }
 
+  del() {
+    this.currentInput = this.currentInput.slice(0,-1);
+  }
   // Clear the input
   clear() {
     this.currentInput = '';  // Reset the current input
     this.operatorClicked = false;  // Reset operator flag
   }
-
-  // inputStr: any;
-
-  // ngOnInit(): void {
-  //   this.inputStr = new FormGroup({
-  //     text : new FormControl()
-  //   })
-  // }
-  //
-  // buttonClick(buttonElement:any){
-  //   let buttonText = buttonElement.textContent;
-  //   this.inputStr.controls.text.setValue(buttonText)
-  // }
 }

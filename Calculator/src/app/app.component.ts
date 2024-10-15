@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CalculatorSiteComponent } from "./calculator-site/calculator-site.component";
+//import { CalculatePipe } from "./calculate.pipe";
 
 @Component({
   selector: 'app-root',
