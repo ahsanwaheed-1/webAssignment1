@@ -2,6 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalculatorSiteComponent } from './calculator-site.component';
 
+import { FormsModule} from "@angular/forms";
+
 describe('CalculatorSiteComponent', () => {
   let component: CalculatorSiteComponent;
   let fixture: ComponentFixture<CalculatorSiteComponent>;

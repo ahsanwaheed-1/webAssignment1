@@ -12,21 +12,19 @@
 <body>
 <div class="container">
   <div class="display mb-4">
-    <form action="" [formGroup] = "inputStr">
-      <input type="text" formControlName="text" class="form-control text"/>
-    </form>
+    <input type="text" class="text" [(ngModel)]="currentInput" readonly />
   </div>
 
   <div class="buttons">
     <div class="row g-3">
       <div class="col">
-        <button (click)="buttonClick($event.target)" class="btn bg-white shadow">7</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">7</button>
       </div>
       <div class="col">
-        <button (click) ="buttonClick($event.target)" class="btn bg-white shadow">8</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">8</button>
       </div>
       <div class="col">
-        <button class="btn bg-white shadow">9</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">9</button>
       </div>
       <div class="col">
         <button class=" delete-button shadow">DEL</button>
@@ -34,52 +32,52 @@
     </div>
     <div class="row g-3 mt-2">
       <div class="col">
-        <button class="btn bg-white shadow">6</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">6</button>
       </div>
       <div class="col">
-        <button class="btn bg-white shadow">5</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">5</button>
       </div>
       <div class="col">
-        <button class="btn bg-white shadow">4</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">4</button>
       </div>
       <div class="col">
-        <button class="btn hover-none bg-white shadow">+</button>
-      </div>
-    </div>
-    <div class="row g-3 mt-2">
-      <div class="col">
-        <button class="btn bg-white shadow">3</button>
-      </div>
-      <div class="col">
-        <button class="btn bg-white shadow">2</button>
-      </div>
-      <div class="col">
-        <button class="btn bg-white shadow">1</button>
-      </div>
-      <div class="col">
-        <button class="btn bg-white shadow">-</button>
+        <button (click)="opClick($event)" class="btn hover-none bg-white shadow">+</button>
       </div>
     </div>
     <div class="row g-3 mt-2">
       <div class="col">
-        <button class="btn bg-white shadow">.</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">3</button>
       </div>
       <div class="col">
-        <button class="btn bg-white shadow">0</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">2</button>
       </div>
       <div class="col">
-        <button class="btn bg-white shadow">/</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">1</button>
       </div>
       <div class="col">
-        <button class="btn bg-white shadow">x</button>
+        <button (click)="opClick($event)" class="btn bg-white shadow">-</button>
       </div>
     </div>
     <div class="row g-3 mt-2">
       <div class="col">
-        <button class="sub-buttons warning  shadow">Reset</button>
+        <button (click)="opClick($event)" class="btn bg-white shadow">.</button>
       </div>
       <div class="col">
-        <button  class="sub-buttons  btn fs-1  btn-danger shadow">=</button>
+        <button (click)="numClick($event)" class="btn bg-white shadow">0</button>
+      </div>
+      <div class="col">
+        <button (click)="opClick($event)" class="btn bg-white shadow">/</button>
+      </div>
+      <div class="col">
+        <button (click)="opClick($event)" class="btn bg-white shadow">x</button>
+      </div>
+    </div>
+    <div class="row g-3 mt-2">
+      <div class="col">
+        <button (click)="clear()" class="sub-buttons warning  shadow">Reset</button>
+      </div>
+      <div class="col">
+        <button (click)="calculate()" class="sub-buttons  btn fs-1  btn-danger shadow">=</button>
       </div>
     </div>
   </div>
