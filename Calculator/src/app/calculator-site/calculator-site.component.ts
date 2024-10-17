@@ -2,12 +2,12 @@ import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {ReactiveFormsModule, FormsModule} from "@angular/forms"
 import { RouterOutlet } from '@angular/router';
-//import {CalculatePipe} from "../calculate.pipe";
+import {CustomNumberPipe} from "../calculate.pipe";
 
 @Component({
   selector: 'app-calculator-site',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [RouterOutlet, FormsModule, ReactiveFormsModule, CommonModule, CustomNumberPipe],
   templateUrl: './calculator-site.component.html',
   styleUrl: './calculator-site.component.css'
 })

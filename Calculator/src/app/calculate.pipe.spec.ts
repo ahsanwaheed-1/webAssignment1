@@ -1,6 +1,4 @@
-
-//IGNORE THIS FILE, I WAS TRYING TO IMPLEMENT PIPES
-
+//IGNORE THIS FILE
 // import { CalculatePipe } from './calculate.pipe';
 //
 // describe('CalculatePipe', () => {
