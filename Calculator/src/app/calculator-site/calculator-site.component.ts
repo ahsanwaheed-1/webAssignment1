@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {FormGroup,FormControl, ReactiveFormsModule, FormsModule} from "@angular/forms"
+import {ReactiveFormsModule, FormsModule} from "@angular/forms"
 import { RouterOutlet } from '@angular/router';
 //import {CalculatePipe} from "../calculate.pipe";
 
