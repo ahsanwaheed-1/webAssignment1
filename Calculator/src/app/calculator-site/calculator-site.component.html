@@ -14,7 +14,19 @@
 </head>
 <body>
 <div class="container">
-  <h4>calc</h4>
+  <div class="lumber">
+    <span>1 2 3</span>
+  </div>
+  <div class="bar">
+    <div class="title">calc</div>
+    <div class="theme">
+      <span>THEME</span>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
   <div class="display mb-4">
     <input type="text" class="text" [value]="currentInput | formatting" readonly />
   </div>
@@ -78,7 +90,7 @@
     </div>
     <div class="row g-3 mt-2">
       <div class="col">
-        <button (click)="clear()" class="sub-buttons warning shadow">Reset</button>
+        <button (click)="clear()" class="sub-buttons warning shadow">RESET</button>
       </div>
       <div class="col">
         <button (click)="calculate()" class="sub-buttons btn fs-1 btn-danger shadow">=</button>
