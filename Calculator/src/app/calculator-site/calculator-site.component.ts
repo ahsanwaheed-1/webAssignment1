@@ -48,7 +48,8 @@ export class CalculatorSiteComponent {
   calculate() {
     try {
       // Evaluate the expression, removing any spaces
-      this.currentInput = eval(this.currentInput.replace(/ /g, ''));
+      const result = eval(this.currentInput.replace(/ /g, ''));
+      this.currentInput = result.toString();
     } catch (error) {
       this.currentInput = 'Error';  // Handle invalid expressions
     }
